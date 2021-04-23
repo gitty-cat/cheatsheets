@@ -48,13 +48,13 @@ important to use parantheses to declare proper order of operations.
 
 (conditional 1) | (conditional 2)
 
-**&** 
+- **&** 
 AND operator that combines two masks 
 
-**|**
+- **|**
 OR operator that combines two masks
 
-**~**
+- **~**
 NOT operator of a single mask
 
 ### Location
