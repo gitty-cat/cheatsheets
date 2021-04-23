@@ -1,6 +1,7 @@
 # pandas Module Cheatsheet
 
 ## Importing
+
 **import pandas**
 
 ## Quick Use
@@ -9,19 +10,25 @@
 1. DataFrames are 2-dimensional structures (like a grid)
 2. Series is 1-dimensional (only a row or column)
 
-**pd.read_csv('/path.csv')**:
-Provides lots of ways to access and perform computations on the data
+**df = pd.read_csv('/path.csv')**:
+Provides lots of ways to access and perform computations on the data.
+Creates a DataFrame object that can be then accessed.
 
 ### Accessing a Column
+
 **df[key]**:
 Similar to accessing a dictionary, use a key, often times a string, to return
 a column's information from the *DataFrame*. What is returned is a *Series*, that
 represents a single column or row of a *DataFrame*.
 
 ### Series Operationes
+
 **df[key] + df[key]**:
 Allows use of operators on data within the series, returning a single Series.
 However, the original Series won't be changed without assignment.
+
+**df[key] + element**
+Applies the operator uniformly across the Series.
 
 ## Functions
 
