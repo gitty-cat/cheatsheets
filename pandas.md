@@ -21,7 +21,7 @@ Similar to accessing a dictionary, use a key, often times a string, to return
 a column's information from the *DataFrame*. What is returned is a *Series*, that
 represents a single column or row of a *DataFrame*.
 
-### Series Operationes
+### Series Operations
 
 **df[key] + df[key]**:
 Allows use of operators on data within the series, returning a single Series.
@@ -29,6 +29,51 @@ However, the original Series won't be changed without assignment.
 
 **df[key] + element**
 Applies the operator uniformly across the Series.
+
+### Filtering Data
+
+**df2 = df1[df1[key] bool_stat]**:
+Allows only the conditional information to filter the Series out of the DataFrame.
+
+#### Mask
+Masks allow the use of a boolean Series as an inexer to grab all the rows or
+columns specified.
+
+variable = df[key] conditional
+
+#### Filtering on Multiple Conditions
+
+Using filtering comes with precedence (order of operations). Ergo, it's
+important to use parantheses to declare proper order of operations.
+
+(conditional 1) | (conditional 2)
+
+**&** 
+AND operator that combines two masks 
+
+**|**
+OR operator that combines two masks
+
+**~**
+NOT operator of a single mask
+
+### Location
+
+The loc property allows for specification a row indexer and a column indexer to
+locate elements and access values.
+- If both the row and column indexers are single value, a single value is returned
+- If only one of the row or column indexers is a single value, returns a Series
+- If neither the row and column indexers are single values, returns a DataFrame
+
+**df.loc[row_indexer, column_indexer]**
+Uses the row and column indexer (which can also be Series keys) to access
+desired values. 
+
+df.loc[[x, y, z], :]]
+Lists or slices of values are accepted as indexers
+
+**: (for everything)**
+When used as an indexer, the ":" will default to all values available
 
 ## Functions
 
