@@ -1,25 +1,34 @@
 # pandas Module Cheatsheet
 
+## Importing
+**import pandas**
+
+## Quick Use
+
+**DataFrame**
+
+*pd.read_csv('/path.csv')*: 
+Provides lots of ways to access and perform computations on the data
 
 ## Functions
 
-**mean()**
+**mean()**:
 Calculates the average value of the Series
 
-**min()**
+**min()**:
 Calculates the minimum value of the Series
 
-**max()**
+**max()**:
 Calculates the maximum value of the Series
 
-**idxmin**
+**idxmin**:
 Calculates the index of the minimum value of the Series
 
-**idxmax**
+**idxmax**:
 Calculates the index of the maximum value of the Series
 
-**count()**
+**count()**:
 Calculates the number values in the Series
 
-**unique()**
+**unique()**:
 Reurns a new Series with all the unique values from the Series
