@@ -12,11 +12,16 @@
 **pd.read_csv('/path.csv')**:
 Provides lots of ways to access and perform computations on the data
 
-#### Accessing a Column
+### Accessing a Column
 **df[key]**:
 Similar to accessing a dictionary, use a key, often times a string, to return
 a column's information from the *DataFrame*. What is returned is a *Series*, that
 represents a single column or row of a *DataFrame*.
+
+### Series Operationes
+**df[key] + df[key]**:
+Allows use of operators on data within the series, returning a single Series.
+However, the original Series won't be changed without assignment.
 
 ## Functions
 
