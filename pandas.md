@@ -5,10 +5,18 @@
 
 ## Quick Use
 
-**DataFrame**
+### DataFrame
+1. DataFrames are 2-dimensional structures (like a grid)
+2. Series is 1-dimensional (only a row or column)
 
-*pd.read_csv('/path.csv')*: 
+**pd.read_csv('/path.csv')**:
 Provides lots of ways to access and perform computations on the data
+
+#### Accessing a Column
+**df[key]**:
+Similar to accessing a dictionary, use a key, often times a string, to return
+a column's information from the *DataFrame*. What is returned is a *Series*, that
+represents a single column or row of a *DataFrame*.
 
 ## Functions
 
