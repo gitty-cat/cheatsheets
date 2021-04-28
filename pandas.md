@@ -65,15 +65,36 @@ locate elements and access values.
 - If only one of the row or column indexers is a single value, returns a Series
 - If neither the row and column indexers are single values, returns a DataFrame
 
-**df.loc[row_indexer, column_indexer]**
+**df.loc[row_indexer, column_indexer]**:
 Uses the row and column indexer (which can also be Series keys) to access
 desired values. 
 
-df.loc[[x, y, z], :]]
+**df.loc[[x, y, z], :]]**:
 Lists or slices of values are accepted as indexers
 
 **: (for everything)**
 When used as an indexer, the ":" will default to all values available
+
+### Group By
+The groupby function allows a specific value to be chosen, and then aggregate
+another based upon that value as a filter. Best used for when you want to
+separate your data into groups to get some value for each one.
+
+**df.groupby(by=key)[aggr_val].sum()**
+The .groupby(key) tells the DataFrame we want to group all of its rows by
+the key attribute. The function .sum() at the end can be replaced by other
+pandas functions such as min, max, and mean.
+
+### Apply
+Allows functions to be passed into pandas to transform a value and apply it
+to each element in a Series
+
+**def function(param):
+    pass**
+
+**df['name'].apply(function)**
+Takes the function and returns the values from the calculations of function.
+This information must be saved or overwritten.
 
 ## Functions
 
